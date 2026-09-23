@@ -6,7 +6,8 @@ I build reliable data and ML platforms with **Terraform**, **SageMaker**, and **
 
 ## Public work
 
-- **[sagemaker-mlops-pipeline-starter](https://github.com/saranreddy/sagemaker-mlops-pipeline-starter)** — download-and-apply SageMaker Pipelines starter (process → train → evaluate → register → deploy), with Terraform bootstrap and a full “run against your AWS account” guide. Use it as a GitHub Template.
+- **[sagemaker-mlops-pipeline-starter](https://github.com/saranreddy/sagemaker-mlops-pipeline-starter)** — download-and-apply SageMaker Pipelines starter (process → train → evaluate → register → deploy), with Terraform bootstrap and a full “run against your AWS account” guide. GitHub Template.
+- **[aws-msk-kafka-starter](https://github.com/saranreddy/aws-msk-kafka-starter)** — download-and-apply Amazon MSK (Serverless) starter: Terraform VPC + cluster, Python producer/consumer with IAM auth. GitHub Template — destroy when done; NAT/MSK costs add up if left up.
 
 ## Building
 
