@@ -1,4 +1,4 @@
-# saran reddy
+# Saran Alla
 
 Platform / MLOps engineer focused on AWS.
 
