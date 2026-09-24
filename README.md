@@ -10,6 +10,7 @@ I build reliable data and ML platforms with **Terraform**, **SageMaker**, and **
 - **[sagemaker-model-monitor-starter](https://github.com/saranreddy/sagemaker-model-monitor-starter)** — companion to the MLOps pipeline starter: SageMaker Model Monitor data-quality baselines + monitoring schedules, Terraform + CLIs. GitHub Template — delete endpoints/schedules when done.
 - **[aws-msk-kafka-starter](https://github.com/saranreddy/aws-msk-kafka-starter)** — download-and-apply Amazon MSK (Serverless) starter: Terraform VPC + cluster, Python producer/consumer with IAM auth. GitHub Template — destroy when done; NAT/MSK costs add up if left up.
 - **[aws-eventbridge-lambda-sqs-starter](https://github.com/saranreddy/aws-eventbridge-lambda-sqs-starter)** — download-and-apply EventBridge + Lambda + SQS starter: custom bus → Lambda → SQS/DLQ for durable failures, Terraform + demo CLIs. GitHub Template — pennies for a short demo; destroy when done.
+- **[aws-terraform-remote-state-starter](https://github.com/saranreddy/aws-terraform-remote-state-starter)** — Terraform the team way: S3 remote state with DynamoDB locking, dev/stage/prod environments sharing one module, and GitHub Actions plan-on-PR / apply-on-merge via OIDC with per-environment least-privilege roles. GitHub Template — pennies per month.
 
 ## Building
 
