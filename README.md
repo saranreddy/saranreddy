@@ -6,12 +6,25 @@ I build reliable data and ML platforms with **Terraform**, **SageMaker**, and **
 
 ## Public work
 
+All of these are GitHub Templates: click "Use this template", apply to your own AWS account, and destroy when done.
+
+### MLOps on SageMaker
+From a first pipeline to a shared platform for many teams.
+
 - **[sagemaker-mlops-pipeline-starter](https://github.com/saranreddy/sagemaker-mlops-pipeline-starter)** — download-and-apply SageMaker Pipelines starter (process → train → evaluate → register → deploy), with Terraform bootstrap and a full “run against your AWS account” guide. GitHub Template.
 - **[sagemaker-model-monitor-starter](https://github.com/saranreddy/sagemaker-model-monitor-starter)** — companion to the MLOps pipeline starter: SageMaker Model Monitor data-quality baselines + monitoring schedules, Terraform + CLIs. GitHub Template — delete endpoints/schedules when done.
+- **[sagemaker-multi-team-platform-starter](https://github.com/saranreddy/sagemaker-multi-team-platform-starter)** — scale SageMaker from a few data scientists to dozens without growing the platform team: one Terraform entry onboards a team (Studio profiles, ABAC-isolated role, S3/ECR/model registry, instance allowlist), with per-team Budgets, an idle-resource reaper, and endpoint alarms routed to the owning team. GitHub Template — near-zero idle cost; destroy when done.
+
+### Streaming and event-driven
+Kafka and serverless messaging on AWS.
+
 - **[aws-msk-kafka-starter](https://github.com/saranreddy/aws-msk-kafka-starter)** — download-and-apply Amazon MSK (Serverless) starter: Terraform VPC + cluster, Python producer/consumer with IAM auth. GitHub Template — destroy when done; NAT/MSK costs add up if left up.
 - **[aws-eventbridge-lambda-sqs-starter](https://github.com/saranreddy/aws-eventbridge-lambda-sqs-starter)** — download-and-apply EventBridge + Lambda + SQS starter: custom bus → Lambda → SQS/DLQ for durable failures, Terraform + demo CLIs. GitHub Template — pennies for a short demo; destroy when done.
+
+### Terraform foundations
+How a team runs Terraform safely across environments.
+
 - **[aws-terraform-remote-state-starter](https://github.com/saranreddy/aws-terraform-remote-state-starter)** — Terraform the team way: S3 remote state with DynamoDB locking, dev/stage/prod environments sharing one module, and GitHub Actions plan-on-PR / apply-on-merge via OIDC with per-environment least-privilege roles. GitHub Template — pennies per month.
-- **[sagemaker-multi-team-platform-starter](https://github.com/saranreddy/sagemaker-multi-team-platform-starter)** — scale SageMaker from a few data scientists to dozens without growing the platform team: one Terraform entry onboards a team (Studio profiles, ABAC-isolated role, S3/ECR/model registry, instance allowlist), with per-team Budgets, an idle-resource reaper, and endpoint alarms routed to the owning team. GitHub Template — near-zero idle cost; destroy when done.
 
 ## Building
 
