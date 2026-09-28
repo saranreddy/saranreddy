@@ -26,10 +26,19 @@ How a team runs Terraform safely across environments.
 
 - **[aws-terraform-remote-state-starter](https://github.com/saranreddy/aws-terraform-remote-state-starter)** — Terraform the team way: S3 remote state with DynamoDB locking, dev/stage/prod environments sharing one module, and GitHub Actions plan-on-PR / apply-on-merge via OIDC with per-environment least-privilege roles. GitHub Template — pennies per month.
 
-## Building
+## In progress
 
+Being built in the open now. Expect rough edges until each one is marked stable.
+
+- **[aws-rag-quality-gate-starter](https://github.com/saranreddy/aws-rag-quality-gate-starter)** — download-and-apply RAG starter: document Q&A with citations on Bedrock + Aurora pgvector, with an automated evaluation quality gate that blocks deploys when answer quality drops. Terraform.
+- **[aws-cdc-lakehouse-starter](https://github.com/saranreddy/aws-cdc-lakehouse-starter)** — change data capture from RDS Postgres through Debezium on MSK Connect and MSK Serverless into Iceberg tables on S3 (Glue), queried with Athena. Terraform, smoke test, honest teardown.
+- **[sagemaker-self-service-training-starter](https://github.com/saranreddy/sagemaker-self-service-training-starter)** — "bring your train.py": self-service SageMaker training for many data scientists, via a small CLI and one shared, tested pipeline template. Plugs into the multi-team platform starter.
 - **Atlas** — engineering intelligence platform (private). TypeScript product work alongside the AWS platform craft above.
 
 ## Currently
 
 Shipping public, clone-and-run AWS starters that show how I work in production — not toy demos.
+
+## Get in touch
+
+Open to engagements, consulting, and questions about any of these projects. Email me at **[saranreddy2002@gmail.com](mailto:saranreddy2002@gmail.com)**.
