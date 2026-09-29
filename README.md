@@ -2,7 +2,7 @@
 
 Platform / MLOps engineer focused on AWS.
 
-I build reliable data and ML platforms with **Terraform**, **SageMaker**, and **Kafka**, and I care about the boring parts that make systems trustworthy: IaC, pipelines, CI, and clear runbooks.
+I build reliable data and ML platforms with **Terraform**, **SageMaker**, and **Kafka** (including multi-region disaster recovery), and I care about the boring parts that make systems trustworthy: IaC, pipelines, CI, and clear runbooks.
 
 ## Public work
 
@@ -20,6 +20,8 @@ Kafka and serverless messaging on AWS.
 
 - **[aws-msk-kafka-starter](https://github.com/saranreddy/aws-msk-kafka-starter)** — download-and-apply Amazon MSK (Serverless) starter: Terraform VPC + cluster, Python producer/consumer with IAM auth. GitHub Template — destroy when done; NAT/MSK costs add up if left up.
 - **[aws-eventbridge-lambda-sqs-starter](https://github.com/saranreddy/aws-eventbridge-lambda-sqs-starter)** — download-and-apply EventBridge + Lambda + SQS starter: custom bus → Lambda → SQS/DLQ for durable failures, Terraform + demo CLIs. GitHub Template — pennies for a short demo; destroy when done.
+- **kafka-dr-confluent-aws** (repo being prepared for public release) — active-passive Kafka disaster recovery on Confluent Cloud (AWS) with Cluster Linking: Terraform, Python producer/consumer apps on ECS Fargate, scripted failover/failback and drill runner, an MM2 comparison, and CI (Terraform validate, unit tests, shellcheck, Docker builds, Trivy scan).
+- **kafka-dr-aws-native** (repo being prepared for public release) — the same DR pattern on an AWS-native stack: Amazon MSK in two regions with MSK Replicator, Glue Schema Registry, ECS Fargate apps, DynamoDB and CloudWatch, with failover/failback scripts and CI.
 
 ### Terraform foundations
 How a team runs Terraform safely across environments.
@@ -42,7 +44,7 @@ Being built in the open now. Expect rough edges until each one is marked stable.
 
 ## Currently
 
-Shipping public, clone-and-run AWS starters that show how I work in production — not toy demos.
+Shipping public, clone-and-run AWS starters that show how I work in production — not toy demos. Working on Kafka and MLOps platform engineering: multi-region Kafka DR patterns on AWS.
 
 ## Get in touch
 
