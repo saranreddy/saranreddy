@@ -30,6 +30,7 @@ How a team runs Terraform safely across environments.
 
 Being built in the open now. Expect rough edges until each one is marked stable.
 
+- **[pr-to-prod-agents](https://github.com/saranreddy/pr-to-prod-agents)** — PR-to-Production agent team: label a GitHub issue `agent:build` and a LangGraph supervisor runs planner, coder, reviewer, tester, deployer, and reporter agents through a human approval gate, a staging deploy with health-check rollback, and a final report on the issue. Per-agent least-privilege permissions with an audit log, and sandboxed code execution. Runs end to end locally today with mocked GitHub and LLM calls; Bedrock, webhook intake, and the AWS deploy are next.
 - **[aws-rag-quality-gate-starter](https://github.com/saranreddy/aws-rag-quality-gate-starter)** — download-and-apply RAG starter: document Q&A with citations on Bedrock + Aurora pgvector, with an automated evaluation quality gate that blocks deploys when answer quality drops. Terraform.
 - **[aws-cdc-lakehouse-starter](https://github.com/saranreddy/aws-cdc-lakehouse-starter)** — change data capture from RDS Postgres through Debezium on MSK Connect and MSK Serverless into Iceberg tables on S3 (Glue), queried with Athena. Terraform, smoke test, honest teardown.
 - **[sagemaker-self-service-training-starter](https://github.com/saranreddy/sagemaker-self-service-training-starter)** — "bring your train.py": self-service SageMaker training for many data scientists, via a small CLI and one shared, tested pipeline template. Plugs into the multi-team platform starter.
