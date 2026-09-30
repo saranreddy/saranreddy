@@ -21,7 +21,7 @@ Kafka and serverless messaging on AWS.
 - **[aws-msk-kafka-starter](https://github.com/saranreddy/aws-msk-kafka-starter)** — download-and-apply Amazon MSK (Serverless) starter: Terraform VPC + cluster, Python producer/consumer with IAM auth. GitHub Template — destroy when done; NAT/MSK costs add up if left up.
 - **[aws-eventbridge-lambda-sqs-starter](https://github.com/saranreddy/aws-eventbridge-lambda-sqs-starter)** — download-and-apply EventBridge + Lambda + SQS starter: custom bus → Lambda → SQS/DLQ for durable failures, Terraform + demo CLIs. GitHub Template — pennies for a short demo; destroy when done.
 - **[kafka-dr-confluent-aws](https://github.com/saranreddy/kafka-dr-confluent-aws)** — active-passive Kafka disaster recovery on Confluent Cloud (AWS) with Cluster Linking: Terraform, Python producer/consumer apps on ECS Fargate, scripted failover/failback and drill runner, an MM2 comparison, and CI (Terraform validate, unit tests, shellcheck, Docker builds, Trivy scan).
-- **kafka-dr-aws-native** (repo being prepared for public release) — the same DR pattern on an AWS-native stack: Amazon MSK in two regions with MSK Replicator, Glue Schema Registry, ECS Fargate apps, DynamoDB and CloudWatch, with failover/failback scripts and CI.
+- **kafka-dr-aws-native** (private repo) — the same DR pattern on an AWS-native stack: Amazon MSK in two regions with MSK Replicator, Glue Schema Registry, ECS Fargate apps, DynamoDB and CloudWatch, with failover/failback scripts and CI.
 
 ### Terraform foundations
 How a team runs Terraform safely across environments.
