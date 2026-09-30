@@ -21,7 +21,6 @@ Kafka and serverless messaging on AWS.
 - **[aws-msk-kafka-starter](https://github.com/saranreddy/aws-msk-kafka-starter)** — download-and-apply Amazon MSK (Serverless) starter: Terraform VPC + cluster, Python producer/consumer with IAM auth. GitHub Template — destroy when done; NAT/MSK costs add up if left up.
 - **[aws-eventbridge-lambda-sqs-starter](https://github.com/saranreddy/aws-eventbridge-lambda-sqs-starter)** — download-and-apply EventBridge + Lambda + SQS starter: custom bus → Lambda → SQS/DLQ for durable failures, Terraform + demo CLIs. GitHub Template — pennies for a short demo; destroy when done.
 - **[kafka-dr-confluent-aws](https://github.com/saranreddy/kafka-dr-confluent-aws)** — active-passive Kafka disaster recovery on Confluent Cloud (AWS) with Cluster Linking: Terraform, Python producer/consumer apps on ECS Fargate, scripted failover/failback and drill runner, an MM2 comparison, and CI (Terraform validate, unit tests, shellcheck, Docker builds, Trivy scan).
-- **kafka-dr-aws-native** (private repo) — the same DR pattern on an AWS-native stack: Amazon MSK in two regions with MSK Replicator, Glue Schema Registry, ECS Fargate apps, DynamoDB and CloudWatch, with failover/failback scripts and CI.
 
 ### Terraform foundations
 How a team runs Terraform safely across environments.
@@ -41,6 +40,12 @@ Being built in the open now. Expect rough edges until each one is marked stable.
 - **[aws-cdc-lakehouse-starter](https://github.com/saranreddy/aws-cdc-lakehouse-starter)** — change data capture from RDS Postgres through Debezium on MSK Connect and MSK Serverless into Iceberg tables on S3 (Glue), queried with Athena. Terraform, smoke test, honest teardown.
 - **[sagemaker-self-service-training-starter](https://github.com/saranreddy/sagemaker-self-service-training-starter)** — "bring your train.py": self-service SageMaker training for many data scientists, via a small CLI and one shared, tested pipeline template. Plugs into the multi-team platform starter.
 - **Atlas** — engineering intelligence platform (private). TypeScript product work alongside the AWS platform craft above.
+
+## Private work
+
+Not public, so no links here.
+
+- **kafka-dr-aws-native** — private, archived repo: the same Kafka DR pattern as kafka-dr-confluent-aws on an AWS-native stack (Amazon MSK in two regions with MSK Replicator, Glue Schema Registry, ECS Fargate apps, DynamoDB and CloudWatch, with failover/failback scripts and CI).
 
 ## Currently
 
