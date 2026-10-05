@@ -4,6 +4,8 @@ Platform / MLOps engineer focused on AWS.
 
 I build reliable data and ML platforms with **Terraform**, **SageMaker**, and **Kafka** (including multi-region disaster recovery), and I care about the boring parts that make systems trustworthy: IaC, pipelines, CI, and clear runbooks.
 
+Lately I'm building production-style AI agents on AWS: LangGraph harnesses on Bedrock with MCP tools, human approval gates, and test-validated actions.
+
 ## Public work
 
 The AWS starters below are GitHub Templates: click "Use this template", apply to your own AWS account, and destroy when done.
@@ -28,9 +30,10 @@ How a team runs Terraform safely across environments.
 - **[aws-terraform-remote-state-starter](https://github.com/saranreddy/aws-terraform-remote-state-starter)** — Terraform the team way: S3 remote state with DynamoDB locking, dev/stage/prod environments sharing one module, and GitHub Actions plan-on-PR / apply-on-merge via OIDC with per-environment least-privilege roles. GitHub Template — pennies per month.
 
 ### AI agents
-Multi-agent systems that take software work from issue to production.
+Multi-agent systems that take software work from a GitHub issue or a production alarm to a reviewed pull request.
 
 - **[pr-to-prod-agents](https://github.com/saranreddy/pr-to-prod-agents)** — PR-to-Production agent team: label a GitHub issue `agent:build` and a LangGraph supervisor runs planner, coder, reviewer, tester, deployer, and reporter agents through a human approval gate, a staging deploy with health-check rollback, and a final report on the issue. Per-agent least-privilege permissions with an audit log, sandboxed code execution, and 51 passing tests. Runs end to end locally with mocked GitHub and LLM calls; Bedrock, webhook intake, and the AWS CDK deploy are the next milestones.
+- **[mini-debug-assist](https://github.com/saranreddy/mini-debug-assist)** — download-and-deploy mini Uber Debug Assist: a CloudWatch alarm wakes a LangGraph agent on Bedrock (Claude Sonnet 5.5 / Opus 5.5) that runs parallel root-cause subagents over MCP tools (CloudWatch Logs, X-Ray, GitHub, AppConfig), test-validates a fix, and opens a PR for human review. CDK deploy, local mock mode, one-command teardown. GitHub Template — about $2–7 for a short demo (needs Bedrock model access); destroy when done. Mock mode runs end to end; first live-account deploy pending.
 
 ## In progress
 
@@ -49,7 +52,7 @@ Not public, so no links here.
 
 ## Currently
 
-Shipping public, clone-and-run AWS starters that show how I work in production — not toy demos. Working on Kafka and MLOps platform engineering: multi-region Kafka DR patterns on AWS.
+Shipping public, clone-and-run AWS starters that show how I work in production — not toy demos. Working on Kafka and MLOps platform engineering (multi-region Kafka DR patterns on AWS) and production agentic AI, starting with an incident-to-fix debugging agent modeled on Uber's Debug Assist.
 
 ## Get in touch
 
