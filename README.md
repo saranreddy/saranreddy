@@ -31,6 +31,7 @@ How a team runs Terraform safely across environments.
 Multi-agent systems that take software work from issue to production.
 
 - **[pr-to-prod-agents](https://github.com/saranreddy/pr-to-prod-agents)** — PR-to-Production agent team: label a GitHub issue `agent:build` and a LangGraph supervisor runs planner, coder, reviewer, tester, deployer, and reporter agents through a human approval gate, a staging deploy with health-check rollback, and a final report on the issue. Per-agent least-privilege permissions with an audit log, sandboxed code execution, and 51 passing tests. Runs end to end locally with mocked GitHub and LLM calls; Bedrock, webhook intake, and the AWS CDK deploy are the next milestones.
+- **[mini-debug-assist](https://github.com/saranreddy/mini-debug-assist)** — download-and-deploy mini Uber Debug Assist: a CloudWatch alarm wakes a LangGraph agent on Bedrock (Claude Sonnet 5.5 / Opus 5.5) that runs parallel root-cause subagents over MCP tools (CloudWatch Logs, X-Ray, GitHub, AppConfig), test-validates a fix, and opens a PR for human review. CDK deploy, local mock mode, one-command teardown.
 
 ## In progress
 
