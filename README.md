@@ -39,6 +39,7 @@ Multi-agent systems that take software work from a GitHub issue or a production 
 
 Being built in the open now. Expect rough edges until each one is marked stable.
 
+- **[tesla-driving-data-mlops](https://github.com/saranreddy/tesla-driving-data-mlops)** — personal Tesla driving data on AWS—TeslaMate on a small EC2 instance writing into Postgres, with nightly Parquet exports to S3 queried by Athena; SageMaker training is the next phase, once trips accumulate.
 - **[aws-rag-quality-gate-starter](https://github.com/saranreddy/aws-rag-quality-gate-starter)** — download-and-apply RAG starter: document Q&A with citations on Bedrock + Aurora pgvector, with an automated evaluation quality gate that blocks deploys when answer quality drops. Terraform.
 - **[aws-cdc-lakehouse-starter](https://github.com/saranreddy/aws-cdc-lakehouse-starter)** — change data capture from RDS Postgres through Debezium on MSK Connect and MSK Serverless into Iceberg tables on S3 (Glue), queried with Athena. Terraform, smoke test, honest teardown.
 - **[sagemaker-self-service-training-starter](https://github.com/saranreddy/sagemaker-self-service-training-starter)** — "bring your train.py": self-service SageMaker training for many data scientists, via a small CLI and one shared, tested pipeline template. Plugs into the multi-team platform starter.
