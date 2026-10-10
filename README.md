@@ -1,6 +1,6 @@
 # Saran Alla
 
-Platform / MLOps engineer focused on AWS.
+Platform / MLOps engineer on AWS: streaming, lakehouses, and ML pipelines from real-world telemetry.
 
 I build reliable data and ML platforms with **Terraform**, **SageMaker**, and **Kafka** (including multi-region disaster recovery), and I care about the boring parts that make systems trustworthy: IaC, pipelines, CI, and clear runbooks.
 
@@ -39,7 +39,7 @@ Multi-agent systems that take software work from a GitHub issue or a production 
 
 Being built in the open now. Expect rough edges until each one is marked stable.
 
-- **[tesla-driving-data-mlops](https://github.com/saranreddy/tesla-driving-data-mlops)** — personal Tesla driving data on AWS—TeslaMate on a small EC2 instance writing into Postgres, with nightly Parquet exports to S3 queried by Athena; SageMaker training is the next phase, once trips accumulate.
+- **[tesla-driving-data-mlops](https://github.com/saranreddy/tesla-driving-data-mlops)** — my own Tesla's drives turned into an insurance-style driving risk score. TeslaMate on a ~$12/month EC2 instance streams the car into Postgres, and nightly jobs land it in a bronze → silver → gold lakehouse on S3 (Athena), with data-quality checks born from real bugs the first drive exposed. Next up is a transparent 0–100 trip score and a SageMaker pipeline with drift monitoring, built as pluggable use-case modules (insurance first, battery health next).
 - **[aws-rag-quality-gate-starter](https://github.com/saranreddy/aws-rag-quality-gate-starter)** — download-and-apply RAG starter: document Q&A with citations on Bedrock + Aurora pgvector, with an automated evaluation quality gate that blocks deploys when answer quality drops. Terraform.
 - **[aws-cdc-lakehouse-starter](https://github.com/saranreddy/aws-cdc-lakehouse-starter)** — change data capture from RDS Postgres through Debezium on MSK Connect and MSK Serverless into Iceberg tables on S3 (Glue), queried with Athena. Terraform, smoke test, honest teardown.
 - **[sagemaker-self-service-training-starter](https://github.com/saranreddy/sagemaker-self-service-training-starter)** — "bring your train.py": self-service SageMaker training for many data scientists, via a small CLI and one shared, tested pipeline template. Plugs into the multi-team platform starter.
