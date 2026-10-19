@@ -2,7 +2,7 @@
 
 Platform / MLOps engineer on AWS: streaming, lakehouses, and ML pipelines from real-world telemetry.
 
-I build reliable data and ML platforms with **Terraform**, **SageMaker**, and **Kafka** (including multi-region disaster recovery), and I care about the boring parts that make systems trustworthy: IaC, pipelines, CI, and clear runbooks.
+I build reliable data and ML platforms with **Terraform**, **SageMaker**, and **Kafka** (including multi-region disaster recovery and on-prem to MSK migrations), and I care about the boring parts that make systems trustworthy: IaC, pipelines, CI, and clear runbooks.
 
 Lately I'm building production-style AI agents on AWS: LangGraph harnesses on Bedrock with MCP tools, human approval gates, and test-validated actions.
 
@@ -23,6 +23,7 @@ Kafka and serverless messaging on AWS.
 - **[aws-msk-kafka-starter](https://github.com/saranreddy/aws-msk-kafka-starter)** — download-and-apply Amazon MSK (Serverless) starter: Terraform VPC + cluster, Python producer/consumer with IAM auth. GitHub Template — destroy when done; NAT/MSK costs add up if left up.
 - **[aws-eventbridge-lambda-sqs-starter](https://github.com/saranreddy/aws-eventbridge-lambda-sqs-starter)** — download-and-apply EventBridge + Lambda + SQS starter: custom bus → Lambda → SQS/DLQ for durable failures, Terraform + demo CLIs. GitHub Template — pennies for a short demo; destroy when done.
 - **[kafka-dr-confluent-aws](https://github.com/saranreddy/kafka-dr-confluent-aws)** — active-passive Kafka disaster recovery on Confluent Cloud (AWS) with Cluster Linking: Terraform, Python producer/consumer apps on ECS Fargate, scripted failover/failback and drill runner, an MM2 comparison, and CI (Terraform validate, unit tests, shellcheck, Docker builds, Trivy scan).
+- **[kafka-msk-migration](https://github.com/saranreddy/kafka-msk-migration)** — migrate a portfolio of on-prem Kafka clusters (Cloudera and Confluent) to Amazon MSK: Terraform modules for provisioned MSK (IAM auth, TLS, KMS) and MirrorMaker 2 on MSK Connect, Python tools that export topics/ACLs into Terraform and validate offsets, lag and message counts before each client cutover, a docker-compose source simulation, and GitLab CI with OIDC, checkov and manual applies. Deployed to a real AWS account and torn down, with timestamped evidence in the repo (MirrorMaker 2 replicated ~96k messages with 0% drift; consumer-offset translation still being fixed) and a 9-minute walkthrough video recorded from the real run. About $0.47/hour while running; destroy when done.
 
 ### Terraform foundations
 How a team runs Terraform safely across environments.
@@ -53,7 +54,7 @@ Not public, so no links here.
 
 ## Currently
 
-Shipping public, clone-and-run AWS starters that show how I work in production — not toy demos. Working on Kafka and MLOps platform engineering (multi-region Kafka DR patterns on AWS) and production agentic AI, starting with an incident-to-fix debugging agent modeled on Uber's Debug Assist.
+Shipping public, clone-and-run AWS starters that show how I work in production — not toy demos. Working on Kafka and MLOps platform engineering (multi-region Kafka DR patterns and on-prem to MSK migrations on AWS) and production agentic AI, starting with an incident-to-fix debugging agent modeled on Uber's Debug Assist.
 
 ## Get in touch
 
